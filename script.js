@@ -23,10 +23,3 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 document.querySelector('#year').textContent = new Date().getFullYear();
-
-document.querySelector('#signup-form').addEventListener('submit', (event) => {
-  if (!event.currentTarget.action) {
-    event.preventDefault();
-    document.querySelector('#form-note').textContent = 'Signup is ready—connect your newsletter form URL before publishing.';
-  }
-});
