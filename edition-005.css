@@ -1,0 +1,10 @@
+.matchups.three-up{grid-template-columns:repeat(3,minmax(0,1fr))}
+.matchups.three-up .match{border-bottom:0}
+.matchups.three-up .match:nth-child(2){border-right:1px solid var(--green)}
+.matchups.three-up .match:last-child{border-right:0}
+
+@media(max-width:900px){
+  .matchups.three-up{grid-template-columns:1fr}
+  .matchups.three-up .match{border-right:0!important;border-bottom:1px solid var(--green)!important}
+  .matchups.three-up .match:last-child{border-bottom:0!important}
+}
