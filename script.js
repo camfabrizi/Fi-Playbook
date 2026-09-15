@@ -24,7 +24,7 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-const shareText = "Argentina was down 2–0 with minutes left—and still won 3–2. Is that the best comeback of the tournament? Fi's Playbook has the full story.";
+const shareText = document.querySelector('#conversation blockquote').textContent.trim();
 const shareUrl = `${window.location.origin}${window.location.pathname}#conversation`;
 const encodedMessage = encodeURIComponent(`${shareText} ${shareUrl}`);
 const shareStatus = document.querySelector('.share-status');
